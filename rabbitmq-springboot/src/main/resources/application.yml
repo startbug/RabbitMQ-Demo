@@ -3,7 +3,7 @@ spring:
     name: rabbitmq-springboot-test
   rabbitmq:
     port: 5672
-    host: 192.168.50.138
+    host: 172.25.58.100
     username: ems
     password: 123
     virtual-host: /ems

@@ -20,7 +20,7 @@ public class Customer1 {
         Channel channel = connection.createChannel();
 
         //声明队列
-        channel.queueDeclare("worka",true,false,false,null);
+        channel.queueDeclare("worka", true, false, false, null);
 
         channel.basicQos(1); //每一次只能消费一个消息
 
@@ -37,7 +37,7 @@ public class Customer1 {
 
                 //上面取消了自动确认,这里进行手动确认
                 //参数1: 手动确认的表示(消息的id)  参数2: false,每次确认一个(是否确认多参数)
-                channel.basicAck(envelope.getDeliveryTag(),false);
+                channel.basicAck(envelope.getDeliveryTag(), false);
             }
         });
 

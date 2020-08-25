@@ -16,8 +16,8 @@ public class RouteConsumer {
     @RabbitListener(bindings = {
             @QueueBinding(
                     value = @Queue,
-                    exchange = @Exchange(value = "logs_route",type = "direct"),
-                    key = {"info","error","debug"}
+                    exchange = @Exchange(value = "logs_route", type = "direct"),
+                    key = {"info", "error", "debug"}
             )
     })
     public void routeMessage1(String message) {
@@ -27,7 +27,7 @@ public class RouteConsumer {
     @RabbitListener(bindings = {
             @QueueBinding(
                     value = @Queue,
-                    exchange = @Exchange(value = "logs_route",type = "direct"),
+                    exchange = @Exchange(value = "logs_route", type = "direct"),
                     key = {"debug"}
             )
     })
